@@ -1,0 +1,149 @@
+/* RESET */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* NAVBAR GENERAL */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #e4eaea;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+/* LOGO */
+.navbar-logo a {
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: none;
+  padding: 10px;
+  color: #5409DA;
+}
+
+/* HAMBURGUER TOGGLE */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px;
+  color: #5409DA;
+}
+
+.menu-toggle-checkbox {
+  display: none;
+}
+
+/* MENU CONTENEDOR DE LINKS + BOTONES */
+.navbar-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: auto;
+  gap: 30px;
+}
+
+/* LINKS DE NAVEGACIÓN */
+.navbar-links ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-links ul li {
+  list-style: none;
+}
+
+.navbar-links a {
+  color: #5409DA;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar-links a:hover {
+  color: #4E71FF;
+}
+
+/* BOTONES DE ACCIÓN */
+.navbar-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-buttons .btn-register {
+  background-color: #5409DA;
+  color: white;
+  padding: 10px 20px;
+  border: #5409DA 2px solid;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar .btn {
+  color: #5409DA;
+  padding: 10px 20px;
+  border: #5409DA 2px solid;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .navbar-logo a {
+    font-size: 24px;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    background-color: #e4eaea;
+    gap: 15px;
+  }
+
+  .menu-toggle-checkbox:checked + .menu-toggle + .navbar-menu {
+    display: flex;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .navbar-buttons {
+    flex-direction: column;
+    align-items: center
+  }
+
+  .navbar .btn,
+  .navbar-buttons .btn-register {
+    width: 100%;
+    text-align: center;
+  }
+}
