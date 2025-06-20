@@ -79,6 +79,20 @@
   opacity: 1;
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;  
+  appearance: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px 30px 10px 10px;
+  background-image: url("data:image/svg+xml,%3Csvg ...%3E"); /* tu flecha SVG */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+
 .search-button {
     background-color: #5409DA;
     padding: 10px 20px;
